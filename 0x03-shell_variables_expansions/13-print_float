@@ -1,2 +1,2 @@
 #!/bin/bash
-ptintf "%.2f" $NUM | sort 
+ptintf "%.2f\n" $NUM 
