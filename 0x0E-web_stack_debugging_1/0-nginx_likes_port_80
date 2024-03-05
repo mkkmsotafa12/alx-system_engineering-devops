@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configures a server to the above requirements
+
+# remove the default nginx file
+rm /etc/nginx/sites-enabled/default
+# Nginx must be running, and listening on port 80
+ln -s /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
+# restart nginx
+service nginx resrart
