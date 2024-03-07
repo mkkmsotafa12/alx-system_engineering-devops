@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Script to make a request when nginx not working 
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default 
-sudo service nginx start
-rm -f /run/nginx.pid
+# Script to make a request when nginx not working
+
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+echo "" | sudo dd status=none of=/run/nginx.pid
