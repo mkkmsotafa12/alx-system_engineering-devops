@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# script to display info
+display_info () {
+	path=$1.$2
+	sub="$1"
+	dig "$path" | awk '/;; ANSWER SECTION:/ {getline;print}' | awk '{print "The subdomain '"$sub"' is a "$4" record and points to "$5}'
+}
+if [ "$#" -eq 2 ]
+then
+	display_info "$2" "$1"
+else
+	display_info "www" "$1"
+	display_info "lb-01" "$1"
+	display_info "web-01" "$1"
+	display_info "web-02" "$1"
+fi
