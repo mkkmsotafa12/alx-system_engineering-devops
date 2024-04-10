@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-'''
-    this module contains the function top_ten
-'''
+"""
+A function that queries the Reddit API and prints 
+"""
+
 import requests
 from sys import argv
 
