@@ -5,7 +5,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
 
-    # Define the server name (domain or My IP)
+    # Define My server name (domain or My IP)
     server_name 35.174.208.235;
 
     # Add a custom header to responses to identify which server served the request
